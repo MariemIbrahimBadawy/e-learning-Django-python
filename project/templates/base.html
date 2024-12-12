@@ -30,33 +30,21 @@ LAST UPDATE: 2015/01/05
     <link rel="stylesheet" href="{% static 'stylesheet/layout.css' %}">
     <link rel="stylesheet" href="{% static 'stylesheet/uielement.css' %}">
     <link rel="stylesheet" href="{% static 'stylesheet/themes/layouts/fixed-header.css' %}">
-    <!--/ Application stylesheet -->
-    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../image/touch/apple-touch-icon-144x144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../image/touch/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../image/touch/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../image/touch/apple-touch-icon-57x57-precomposed.png">
-    <link rel="shortcut icon" href="../image/favicon.ico"> -->
-    <!-- modernizr script -->
-      <!-- Plugins stylesheet : optional -->
-      <link rel="stylesheet" href="{% static 'plugins/owl/css/owl-carousel.css'%}">
-      <!--/ Plugins stylesheet : optional -->
-     <script type="text/javascript" src="{% static 'plugins/modernizr/js/modernizr.js' %}"></script>
-    <!--/ modernizr script -->
+    <!-- Plugins stylesheet : optional -->
+    <link rel="stylesheet" href="{% static 'plugins/owl/css/owl-carousel.css'%}">
+    <!--/ Plugins stylesheet : optional -->
+    <script type="text/javascript" src="{% static 'plugins/modernizr/js/modernizr.js' %}"></script>
+<!--/ modernizr script -->
     </head>
     <!--/ END Head -->
     <!-- Start Body -->
     <body>
 
-         {% include 'parts/EmptyWithHeaderAndFooter.html' %}
+         {% include 'parts/header.html' %}
+         {% include 'parts/footer.html' %}
          
 
      </body>
-
-{% block content%}
-{% endblock content%}
-
-<!-- {%include 'parts/footer.html' %} -->
-
 
 
         <!-- START JAVASCRIPT SECTION (Load javascripts at bottom to reduce load time) -->
