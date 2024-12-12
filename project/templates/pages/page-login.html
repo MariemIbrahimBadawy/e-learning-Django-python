@@ -1,68 +1,74 @@
+{% extends "base.html" %}
 {% load static %}
-<section>
-    <!-- START Row -->
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <!-- Login form -->
-            <form class="panel no-border mb0" name="form-login" action="">
-                <div class="panel-body">
-                    <div class="logo-in-form">
-                        <img src="../image/logo/logo-figure-inverse.png">
-                    </div>
-                    <!-- Alert message -->
-                    <!-- <div class="alert alert-warning">
-                        <span class="semibold">Note :</span>&nbsp;&nbsp;Just put anything and hit 'sign-in' button.
-                    </div> -->
-                    <!--/ Alert message -->
-                    <div class="form-group">
-                        <select class="form-control" name="lang">
-                            <option value="0">Select language</option>
-                            <option value="en">English</option>
-                            <option value="da">Danish - Dansk</option>
-                            <option value="nl">Dutch - Nederlands</option>
-                            <option value="en-gb">English - UK</option>
-                            <option value="fr">French - français</option>
-                            <option value="de">German - Deutsch</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-stack has-icon pull-left">
-                            <input name="username" type="text" class="form-control input-lg" placeholder="Username / email" data-parsley-errors-container="#error-container" data-parsley-error-message="Please fill in your username / email" data-parsley-required="">
-                            <i class="ico-user2 form-control-icon"></i>
-                        </div>
-                        <div class="form-stack has-icon pull-left">
-                            <input name="password" type="password" class="form-control input-lg" placeholder="Password" data-parsley-errors-container="#error-container" data-parsley-error-message="Please fill in your password" data-parsley-required="">
-                            <i class="ico-lock2 form-control-icon"></i>
-                        </div>
-                    </div>
 
-                    <!-- Error container -->
-                    <div id="error-container" class="mb15"></div>
-                    <!--/ Error container -->
 
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="checkbox custom-checkbox">  
-                                    <input type="checkbox" name="remember" id="remember" value="1">  
-                                    <label for="remember">&nbsp;&nbsp;Remember me</label>   
+{% block login %}
+    <section class="login">
+        <!-- START Row -->
+        <div class="row">
+            <div class="col-md ">
+                <!-- Login form -->
+                <form class="panel no-border mb0" name="form-login" action="">
+                    <div class="panel-body">
+                        <div class="logo-in-form">
+                            <img src="{% static 'image/logo/logo-figure-inverse.png' %}">
+                        </div>
+                        <!-- Alert message -->
+                        <!-- <div class="alert alert-warning">
+                            <span class="semibold">Note :</span>&nbsp;&nbsp;Just put anything and hit 'sign-in' button.
+                        </div> -->
+                        <!--/ Alert message -->
+                        <div class="form-group">
+                            <select class="form-control" name="lang">
+                                <option value="0">Select language</option>
+                                <option value="en">English</option>
+                                <option value="da">Danish - Dansk</option>
+                                <option value="nl">Dutch - Nederlands</option>
+                                <option value="en-gb">English - UK</option>
+                                <option value="fr">French - français</option>
+                                <option value="de">German - Deutsch</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-stack has-icon pull-left">
+                                <input name="username" type="text" class="form-control input-lg" placeholder="Username / email" data-parsley-errors-container="#error-container" data-parsley-error-message="Please fill in your username / email" data-parsley-required="">
+                                <i class="ico-user2 form-control-icon"></i>
+                            </div>
+                            <div class="form-stack has-icon pull-left">
+                                <input name="password" type="password" class="form-control input-lg" placeholder="Password" data-parsley-errors-container="#error-container" data-parsley-error-message="Please fill in your password" data-parsley-required="">
+                                <i class="ico-lock2 form-control-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Error container -->
+                        <div id="error-container" class="mb15"></div>
+                        <!--/ Error container -->
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="checkbox custom-checkbox">  
+                                        <input type="checkbox" name="remember" id="remember" value="1">  
+                                        <label for="remember">&nbsp;&nbsp;Remember me</label>   
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <!-- <a href="javascript:void(0);">go to register?</a> -->
+                                    <a href="{% url 'register' %}">go to register?</a>
                                 </div>
                             </div>
-                            <div class="col-xs-6 text-right">
-                                <!-- <a href="javascript:void(0);">go to register?</a> -->
-                                <a href="page-account-register.html">go to register?</a>
-                            </div>
+                        </div>
+                        <div class="form-group nm">
+                            <button type="submit" class="btn btn-block btn-primary"><span class="semibold">Login</span></button>
                         </div>
                     </div>
-                    <div class="form-group nm">
-                        <button type="submit" class="btn btn-block btn-primary"><span class="semibold">Login</span></button>
-                    </div>
-                </div>
-            </form>
-            <!-- Login form -->
+                </form>
+                <!-- Login form -->
+            </div>
         </div>
-    </div>
-<!-- / END Row -->
-</section>
+    <!-- / END Row -->
+    </section>
 
 
+
+{% endblock login %}

@@ -5,8 +5,7 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'base.html')
 
-# def about(request):
-#     return render(request, 'pages/about.html')
-
-# def services(request):
-#     return render(request, 'pages/services.html')
+def login(request):
+    return render(request , 'pages/page-login.html')
+def register(request):
+    return render(request , 'pages/page-register.html')

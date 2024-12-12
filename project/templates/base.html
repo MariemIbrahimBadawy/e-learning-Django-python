@@ -28,6 +28,8 @@ LAST UPDATE: 2015/01/05
          <!-- Application stylesheet : mandatory -->
     <link rel="stylesheet" href="{% static 'stylesheet/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'stylesheet/layout.css' %}">
+    <!-- Make By Mariem Ibrahim -->
+    <link rel="stylesheet" href="{% static 'stylesheet/EditCss.css' %}">
     <link rel="stylesheet" href="{% static 'stylesheet/uielement.css' %}">
     <link rel="stylesheet" href="{% static 'stylesheet/themes/layouts/fixed-header.css' %}">
     <!-- Plugins stylesheet : optional -->
@@ -39,11 +41,18 @@ LAST UPDATE: 2015/01/05
     <!--/ END Head -->
     <!-- Start Body -->
     <body>
+    
 
-         {% include 'parts/header.html' %}
-         {% include 'parts/footer.html' %}
-         
+        
+        {% include 'parts/header.html' %}
 
+        {% block login %}{% endblock login %}
+        {% block register %}{% endblock register %}
+
+        
+        {% include 'parts/footer.html' %}
+
+    
      </body>
 
 
