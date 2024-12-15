@@ -28,6 +28,7 @@ LAST UPDATE: 2015/01/05
          <!-- Application stylesheet : mandatory -->
     <link rel="stylesheet" href="{% static 'stylesheet/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'stylesheet/layout.css' %}">
+
     <!-- Make By Mariem Ibrahim -->
     <link rel="stylesheet" href="{% static 'stylesheet/EditCss.css' %}">
     <link rel="stylesheet" href="{% static 'stylesheet/uielement.css' %}">
@@ -44,8 +45,12 @@ LAST UPDATE: 2015/01/05
     
 
         
-        {% include 'parts/header.html' %}
+        {% include 'parts/header.html' %} 
+        {% include 'parts/main.html' %} 
 
+        {% block Home %}{% endblock Home %}
+        {% block courses %}{% endblock courses %}
+        {% block about %}{% endblock about %}
         {% block login %}{% endblock login %}
         {% block register %}{% endblock register %}
 

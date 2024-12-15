@@ -5,7 +5,21 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'base.html')
 
+def home(request):
+    return render(request, 'pages/home.html')
+
+def courses(request):
+    return render(request, 'pages/courses.html')
+
+def about(request):
+    return render(request, 'pages/about.html')
+
 def login(request):
-    return render(request , 'pages/page-login.html')
+    path = request.path 
+    return render(request , 'pages/page-login.html' , {'path': path})
+
 def register(request):
-    return render(request , 'pages/page-register.html')
+    path =request.path
+    return render(request , 'pages/page-register.html', {'path':path})
+
+

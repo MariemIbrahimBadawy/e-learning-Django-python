@@ -13266,8 +13266,10 @@ a.list-group-item:focus {
 
 /* Registration */
 .edit-form{
-  width:60%;
-  margin:auto
+  width:100%;
+  display:flex;
+  justify-content: center;
+  
 }
 .list-table {
   display: table;
